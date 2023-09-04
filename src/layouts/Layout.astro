@@ -10,7 +10,7 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/pedal.jpg",
   Astro.site
 ).toString();
 
@@ -28,7 +28,6 @@ const makeTitle = title
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description}>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -36,7 +35,7 @@ const makeTitle = title
 
 		<SEO
 		title={makeTitle}
-		description="Descubre DataEasy, el software de gestión empresarial diseñado para simplificar y optimizar tus procesos. Con un módulo especializado para artes gráficas, integraciones API y facturación electrónica, tendrás todo lo necesario para llevar tu negocio al siguiente nivel. ¡Prueba gratis y descubre cómo DataEasy puede impulsar tu empresa hoy mismo!"
+		description={description}
 		canonical={canonicalURL}
 		twitter={{
 		  creator: "@asdata",
@@ -47,11 +46,11 @@ const makeTitle = title
 		  basic: {
 			url: canonicalURL,
 			type: "website",
-			title: `DataEasy - Software ERP para gestión de procesos empresariales`,
+			title: `I am Pedal - Web`,
 			image: resolvedImageWithDomain,
 		  },
 		  image: {
-			alt: "DataEasy Homepage Screenshot",
+			alt: "Pedal Homepage Screenshot",
 		  },
 		}}
 	  />
