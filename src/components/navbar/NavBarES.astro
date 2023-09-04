@@ -2,28 +2,26 @@
 import Dropdown from "./DropDown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
-import { Icon } from "astro-icon";
-
 const menuitems = [
   {
-    title: "English",
+    title: "Español",
     path: "#",
     children: [
       { title: "Deutsch", path: "/de" },
-      { title: "Español", path: "/es" },
+      { title: "English", path: "/" },
     ],
   },
   {
-    title: "Routes",
-    path: "/pricing",
+    title: "Rutas",
+    path: "es/pricing",
   },
   {
-    title: "About",
-    path: "/about",
+    title: "Sobre nosotros",
+    path: "es/about",
   },
   {
-    title: "Contact",
-    path: "/contact",
+    title: "Contacto",
+    path: "es/contact",
   },
 ];
 ---
@@ -32,7 +30,7 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
+        <a href="/es" class="text-lg"
           ><span class="font-bold text-white">Astro</span><span
             class="text-slate-500">ship</span
           >

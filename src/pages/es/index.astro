@@ -1,14 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from "../components/navbar/NavBar.astro";
+import Layout from '../../layouts/Layout.astro';
+import Navbar from "../../components/navbar/NavBarES.astro";
 
-import { Icon } from "astro-icon";
 
 
 
 ---
 
-<Layout title='Pedal Web' lang="en" description='Description'>
+<Layout title='Pedal Web' lang="es" description='Description'>
 	<Navbar />
 	<main>
 		<svg
@@ -39,8 +38,7 @@ import { Icon } from "astro-icon";
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1><span class="text-gradient">English</span> page</h1>
-		<Icon name="gb" class="h-12" />
+		<h1>Página <span class="text-gradient">Español</span></h1>
 	</main>
 </Layout>
 
