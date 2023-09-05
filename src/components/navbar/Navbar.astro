@@ -2,17 +2,10 @@
 import Dropdown from "./DropDown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
-import { Icon } from "astro-icon";
+
+
 
 const menuitems = [
-  {
-    title: "English",
-    path: "#",
-    children: [
-      { title: "Deutsch", path: "/de", flag:"de" },
-      { title: "Español", path: "/es", flag:"es" },
-    ],
-  },
   {
     title: "Routes",
     path: "/pricing",
@@ -25,6 +18,15 @@ const menuitems = [
     title: "Contact",
     path: "/contact",
   },
+  {
+    title: "English",
+    flag: "gb",
+    path: "#",
+    children: [
+      { title: "Deutsch", path: "/de", dropflag:"de" },
+      { title: "Español", path: "/es", dropflag:"es" },
+    ],
+  }
 ];
 ---
 
@@ -42,7 +44,7 @@ const menuitems = [
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <Icon name="gb" class="h-4 mt-3" />
+        <!-- <Icon name="gb" class="h-4 mt-3" /> -->
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
             menuitems.map((item, index) => (
@@ -50,6 +52,7 @@ const menuitems = [
                 {item.children && (
                   <Dropdown
                     title={item.title}
+                    flag={item.flag}
                     children={item.children}
                     lastItem={index === menuitems.length - 1}
                   />

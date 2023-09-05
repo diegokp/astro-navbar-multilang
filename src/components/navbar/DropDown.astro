@@ -1,6 +1,6 @@
 ---
 import { Dropdown as DropdownContainer, DropdownItems } from "astro-navbar";
-const { title, lastItem, children } = Astro.props;
+const { title, lastItem, children, flag } = Astro.props;
 
 import { Icon } from "astro-icon";
 
@@ -11,7 +11,7 @@ import { Icon } from "astro-icon";
   <DropdownContainer class="group">
     <button
       class="flex items-center gap-1 w-full lg:w-auto lg:px-3 py-2 text-gray-600 hover:text-white">
-      <span>{title}</span>
+      <Icon name={flag} class="h-4" /><span>{title}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -40,7 +40,7 @@ import { Icon } from "astro-icon";
               <a
                 href={item.path}
                 class="flex gap-1 py-1 text-gray-600 hover:text-white">
-                <Icon name={item.flag} class="h-4 mt-1" />{item.title}
+                <Icon name={item.dropflag} class="h-4 mt-1" />{item.title}
               </a>
             ))
           }
