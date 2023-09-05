@@ -1,5 +1,4 @@
-# Astro Starter Kit: Basics
-
+# Astro Starter Navbar multilang
 ```
 npm create astro@latest -- --template basics
 ```
