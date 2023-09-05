@@ -9,8 +9,8 @@ const menuitems = [
     title: "English",
     path: "#",
     children: [
-      { title: "Deutsch", path: "/de" },
-      { title: "Español", path: "/es" },
+      { title: "Deutsch", path: "/de", flag:"de" },
+      { title: "Español", path: "/es", flag:"es" },
     ],
   },
   {
@@ -42,6 +42,7 @@ const menuitems = [
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+        <Icon name="gb" class="h-4 mt-3" />
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
             menuitems.map((item, index) => (

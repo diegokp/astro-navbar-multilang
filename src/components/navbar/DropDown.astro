@@ -2,6 +2,9 @@
 import { Dropdown as DropdownContainer, DropdownItems } from "astro-navbar";
 const { title, lastItem, children } = Astro.props;
 
+import { Icon } from "astro-icon";
+
+
 ---
 
 <li class="relative">
@@ -36,8 +39,8 @@ const { title, lastItem, children } = Astro.props;
             children.map((item) => (
               <a
                 href={item.path}
-                class="py-1 text-gray-600 hover:text-white">
-                {item.title}
+                class="flex gap-1 py-1 text-gray-600 hover:text-white">
+                <Icon name={item.flag} class="h-4 mt-1" />{item.title}
               </a>
             ))
           }
