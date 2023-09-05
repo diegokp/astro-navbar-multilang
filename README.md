@@ -2,7 +2,7 @@
 ```
 npm create astro@latest -- --template basics
 ```
-![Screenshots of astro-navbar-multilang](screenshots.jpg)
+![Screenshots of astro-navbar-multilang](screenshot.jpg)
 
 ## 🚀 Project Structure
 
